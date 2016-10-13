@@ -121,6 +121,23 @@
       <DependentUpon>StatusModel.edmx</DependentUpon>
       <LastGenOutput>StatusModel.cs</LastGenOutput>
     </Content>
+    <EntityDeploy Include="Models\LeaveModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LeaveModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\LeaveModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LeaveModel.edmx</DependentUpon>
+      <LastGenOutput>LeaveModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\LeaveModel.edmx.diagram">
+      <DependentUpon>LeaveModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\LeaveModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LeaveModel.edmx</DependentUpon>
+      <LastGenOutput>LeaveModel.cs</LastGenOutput>
+    </Content>
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
@@ -129,6 +146,24 @@
     <Compile Include="Controllers\DummyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LeaveModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LeaveModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LeaveModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LeaveModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LeaveModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LeaveModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LeaveTable.cs">
+      <DependentUpon>LeaveModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\StatusModel.Context.cs">
       <AutoGen>True</AutoGen>
