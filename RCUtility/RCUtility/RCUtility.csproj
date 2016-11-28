@@ -104,23 +104,6 @@
     <Content Include="Web.config" />
     <Content Include="Metadata\deploymentTemplates\apiappconfig.azureresource.json" />
     <Content Include="packages.config" />
-    <EntityDeploy Include="Models\StatusModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>StatusModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\StatusModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>StatusModel.edmx</DependentUpon>
-      <LastGenOutput>StatusModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\StatusModel.edmx.diagram">
-      <DependentUpon>StatusModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\StatusModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>StatusModel.edmx</DependentUpon>
-      <LastGenOutput>StatusModel.cs</LastGenOutput>
-    </Content>
     <EntityDeploy Include="Models\LeaveModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>LeaveModel.Designer.cs</LastGenOutput>
@@ -138,15 +121,50 @@
       <DependentUpon>LeaveModel.edmx</DependentUpon>
       <LastGenOutput>LeaveModel.cs</LastGenOutput>
     </Content>
+    <EntityDeploy Include="Models\DailyStatusModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DailyStatusModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\DailyStatusModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DailyStatusModel.edmx</DependentUpon>
+      <LastGenOutput>DailyStatusModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\DailyStatusModel.edmx.diagram">
+      <DependentUpon>DailyStatusModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\DailyStatusModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DailyStatusModel.edmx</DependentUpon>
+      <LastGenOutput>DailyStatusModel.cs</LastGenOutput>
+    </Content>
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\DummyController.cs" />
+    <Compile Include="Controllers\DailyStatusController.cs" />
     <Compile Include="Controllers\LeavesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DailyStatu.cs">
+      <DependentUpon>DailyStatusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DailyStatusModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyStatusModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DailyStatusModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyStatusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DailyStatusModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyStatusModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\LeaveModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -165,24 +183,6 @@
     </Compile>
     <Compile Include="Models\LeaveTable.cs">
       <DependentUpon>LeaveModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\StatusModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StatusModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\StatusModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StatusModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\StatusModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StatusModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\StatusTable.cs">
-      <DependentUpon>StatusModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

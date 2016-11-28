@@ -13,10 +13,10 @@ namespace RCUtility.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class RCStatusDatabaseEntities : DbContext
+    public partial class RCStatusDatabaseEntities2 : DbContext
     {
-        public RCStatusDatabaseEntities()
-            : base("name=RCStatusDatabaseEntities")
+        public RCStatusDatabaseEntities2()
+            : base("name=RCStatusDatabaseEntities2")
         {
         }
     
@@ -25,6 +25,6 @@ namespace RCUtility.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<StatusTable> StatusTables { get; set; }
+        public virtual DbSet<DailyStatu> DailyStatus { get; set; }
     }
 }

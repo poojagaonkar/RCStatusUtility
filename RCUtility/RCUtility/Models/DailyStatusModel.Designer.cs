@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'F:\My Stuff\Imp\Projects\Goals\Jul16-dec16\RCUtility\RCUtility\Models\StatusModel.edmx'. 
+﻿// T4 code generation is enabled for model 'F:\My Stuff\Imp\Projects\Goals\Jul16-dec16\Clones\RCUtility\RCUtility\Models\DailyStatusModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

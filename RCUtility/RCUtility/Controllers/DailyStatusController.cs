@@ -12,44 +12,44 @@ using RCUtility.Models;
 
 namespace RCUtility.Controllers
 {
-    public class DummyController : ApiController
+    public class DailyStatusController : ApiController
     {
-        private RCStatusDatabaseEntities db = new RCStatusDatabaseEntities();
+        private RCStatusDatabaseEntities2 db = new RCStatusDatabaseEntities2();
 
-        // GET: api/Dummy
-        public IQueryable<StatusTable> GetStatusTables()
+        // GET: api/DailyStatus
+        public IQueryable<DailyStatu> GetDailyStatus()
         {
-            return db.StatusTables;
+            return db.DailyStatus;
         }
 
-        // GET: api/Dummy/5
-        [ResponseType(typeof(StatusTable))]
-        public IHttpActionResult GetStatusTable(int id)
+        // GET: api/DailyStatus/5
+        [ResponseType(typeof(DailyStatu))]
+        public IHttpActionResult GetDailyStatu(int id)
         {
-            StatusTable statusTable = db.StatusTables.Find(id);
-            if (statusTable == null)
+            DailyStatu dailyStatu = db.DailyStatus.Find(id);
+            if (dailyStatu == null)
             {
                 return NotFound();
             }
 
-            return Ok(statusTable);
+            return Ok(dailyStatu);
         }
 
-        // PUT: api/Dummy/5
+        // PUT: api/DailyStatus/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutStatusTable(int id, StatusTable statusTable)
+        public IHttpActionResult PutDailyStatu(int id, DailyStatu dailyStatu)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != statusTable.Id)
+            if (id != dailyStatu.Id)
             {
                 return BadRequest();
             }
 
-            db.Entry(statusTable).State = EntityState.Modified;
+            db.Entry(dailyStatu).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +57,7 @@ namespace RCUtility.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!StatusTableExists(id))
+                if (!DailyStatuExists(id))
                 {
                     return NotFound();
                 }
@@ -70,16 +70,16 @@ namespace RCUtility.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Dummy
-        [ResponseType(typeof(StatusTable))]
-        public IHttpActionResult PostStatusTable(StatusTable statusTable)
+        // POST: api/DailyStatus
+        [ResponseType(typeof(DailyStatu))]
+        public IHttpActionResult PostDailyStatu(DailyStatu dailyStatu)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.StatusTables.Add(statusTable);
+            db.DailyStatus.Add(dailyStatu);
 
             try
             {
@@ -87,7 +87,7 @@ namespace RCUtility.Controllers
             }
             catch (DbUpdateException)
             {
-                if (StatusTableExists(statusTable.Id))
+                if (DailyStatuExists(dailyStatu.Id))
                 {
                     return Conflict();
                 }
@@ -97,23 +97,23 @@ namespace RCUtility.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = statusTable.Id }, statusTable);
+            return CreatedAtRoute("DefaultApi", new { id = dailyStatu.Id }, dailyStatu);
         }
 
-        // DELETE: api/Dummy/5
-        [ResponseType(typeof(StatusTable))]
-        public IHttpActionResult DeleteStatusTable(int id)
+        // DELETE: api/DailyStatus/5
+        [ResponseType(typeof(DailyStatu))]
+        public IHttpActionResult DeleteDailyStatu(int id)
         {
-            StatusTable statusTable = db.StatusTables.Find(id);
-            if (statusTable == null)
+            DailyStatu dailyStatu = db.DailyStatus.Find(id);
+            if (dailyStatu == null)
             {
                 return NotFound();
             }
 
-            db.StatusTables.Remove(statusTable);
+            db.DailyStatus.Remove(dailyStatu);
             db.SaveChanges();
 
-            return Ok(statusTable);
+            return Ok(dailyStatu);
         }
 
         protected override void Dispose(bool disposing)
@@ -125,9 +125,9 @@ namespace RCUtility.Controllers
             base.Dispose(disposing);
         }
 
-        private bool StatusTableExists(int id)
+        private bool DailyStatuExists(int id)
         {
-            return db.StatusTables.Count(e => e.Id == id) > 0;
+            return db.DailyStatus.Count(e => e.Id == id) > 0;
         }
     }
 }

@@ -12,12 +12,14 @@ namespace RCUtility.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class StatusTable
+    public partial class DailyStatu
     {
         public int Id { get; set; }
+        public string Username { get; set; }
+        public string Email { get; set; }
         public string Status { get; set; }
         public System.DateTime ReachingAt { get; set; }
-        public Nullable<bool> Lunch { get; set; }
         public string Comment { get; set; }
+        public Nullable<bool> Lunch { get; set; }
     }
 }
