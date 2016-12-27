@@ -19,6 +19,5 @@ E:\My Stuff\Imp\Projects\Goals\Jul16-dec16\Clones\RCUtility\RCUtility\bin\Newton
 E:\My Stuff\Imp\Projects\Goals\Jul16-dec16\Clones\RCUtility\RCUtility\bin\System.Net.Http.Formatting.xml
 E:\My Stuff\Imp\Projects\Goals\Jul16-dec16\Clones\RCUtility\RCUtility\bin\System.Web.Http.xml
 E:\My Stuff\Imp\Projects\Goals\Jul16-dec16\Clones\RCUtility\RCUtility\bin\System.Web.Http.WebHost.xml
-E:\My Stuff\Imp\Projects\Goals\Jul16-dec16\Clones\RCUtility\RCUtility\obj\Debug\RCUtility.csprojResolveAssemblyReference.cache
 E:\My Stuff\Imp\Projects\Goals\Jul16-dec16\Clones\RCUtility\RCUtility\obj\Debug\RCUtility.dll
 E:\My Stuff\Imp\Projects\Goals\Jul16-dec16\Clones\RCUtility\RCUtility\obj\Debug\RCUtility.pdb

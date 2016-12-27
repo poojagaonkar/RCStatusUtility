@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RCStatusDatabaseModel1StoreContainer" CdmEntityContainer="RCStatusDatabaseEntities1">
+    <EntitySetMapping Name="LeaveTables">
+      <EntityTypeMapping TypeName="RCStatusDatabaseModel1.LeaveTable">
+        <MappingFragment StoreEntitySet="LeaveTable">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="LeaveType" ColumnName="LeaveType" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="InformedClient" ColumnName="InformedClient" />
+          <ScalarProperty Name="BalanceLeaves" ColumnName="BalanceLeaves" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
