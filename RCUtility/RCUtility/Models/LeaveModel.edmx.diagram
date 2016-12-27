@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="1c4d86a054d04ec1aac4a55be00b3d62" Name="Diagram1">
-        <EntityTypeShape EntityType="RCStatusDatabaseModel1.LeaveTable" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCStatusDatabaseModel1.LeaveTable" Width="1.875" PointX="0.875" PointY="1.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

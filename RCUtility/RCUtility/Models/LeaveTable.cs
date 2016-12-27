@@ -21,5 +21,7 @@ namespace RCUtility.Models
         public string Reason { get; set; }
         public bool InformedClient { get; set; }
         public Nullable<double> BalanceLeaves { get; set; }
+        public string Username { get; set; }
+        public string Email { get; set; }
     }
 }

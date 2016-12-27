@@ -85,7 +85,7 @@ namespace RCUtility.Controllers
             {
                 db.SaveChanges();
             }
-            catch (DbUpdateException)
+            catch (DbUpdateException dEx)
             {
                 if (LeaveTableExists(leaveTable.Id))
                 {

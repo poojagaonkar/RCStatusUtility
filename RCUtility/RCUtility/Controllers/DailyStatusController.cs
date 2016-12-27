@@ -96,6 +96,10 @@ namespace RCUtility.Controllers
                     throw;
                 }
             }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
             return CreatedAtRoute("DefaultApi", new { id = dailyStatu.Id }, dailyStatu);
         }
